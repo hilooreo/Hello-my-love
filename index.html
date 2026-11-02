@@ -1,50 +1,259 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Anniversary 💗</title>
-  <style>
-    body {
-      background: #fff0f5;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-      color: #8b4562;
-    }
-    .card {
-      background: white;
-      max-width: 450px;
-      margin: auto;
-      padding: 35px 20px;
-      border-radius: 25px;
-      box-shadow: 0 5px 20px #e8b8cb;
-    }
-    h1 { color: #e66b96; }
-    button {
-      background: #e66b96;
-      color: white;
-      border: none;
-      padding: 13px 25px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOR MY TARA</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f7f8c9;
+  color: #e46f96;
+  text-align: center;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 50px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page.active { display: flex; }
+
+h1 { color: #d77d99; font-size: 42px; }
+h2 { color: #d77d99; }
+
+p { line-height: 1.8; }
+
+button {
+  background: #e89bb2;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 12px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d77999;
+  transform: scale(1.05);
+}
+
+.heart {
+  font-size: 55px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+.container {
+  max-width: 850px;
+  width: 100%;
+  margin: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.photo {
+  background: white;
+  padding: 10px 10px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px #e9cbd4;
+  transform: rotate(-2deg);
+}
+
+.photo:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo span {
+  display: block;
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+.letter {
+  background: #fffafa;
+  max-width: 550px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px #e9cbd4;
+  line-height: 2;
+  text-align: left;
+}
+
+#letterText { display: none; }
+
+@media(max-width: 500px) {
+  h1 { font-size: 34px; }
+  .photo img { height: 140px; }
+  .letter { padding: 22px; }
+}
+</style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Happy Anniversary 💗</h1>
-    <p>Every moment with you is special.</p>
-    <h2>ขอบคุณที่อยู่ด้วยกันนะ</h2>
-    <button onclick="showLove()">กดอ่านข้อความ 💌</button>
-    <p id="message"></p>
+
+<!-- PAGE 1: WELCOME -->
+<section id="page1" class="page active">
+  <div class="heart">♡</div>
+  <p>FOR MY FAVORITE PERSON KA</p>
+  <h1>Hello my lovie kikiki</h1>
+  <p>เค้าตั้งใจทำให้เบบี๋เยยนะ</p>
+  <p>click click 🥺</p>
+  <button onclick="goTo('page2')">
+    คลิ้กทุโอเพ้น
+  </button>
+  <p>ไม่เคยรักใครเท่าจิ๋วมาก่อน</p>
+</section>
+
+<!-- PAGE 2: PHOTO GALLERY -->
+<section id="page2" class="page">
+  <div class="container">
+    <div class="heart">♡</div>
+    <h1>Our sweet memories</h1>
+    <p>ดูรูปหวานๆชวนนึกถึงกันงะ รักเหมือนวันแรกเยย♡</p>
+
+    <div class="gallery">
+
+      <div class="photo">
+        <img src="photo1.jpg" alt="">
+        <span>เดือนแรกของเรางะ ♡</span>
+      </div>
+
+      <div class="photo">
+        <img src="photo2.jpg" alt="">
+        <span>อันนิเดือนที่ฉอง</span>
+      </div>
+
+      <div class="photo">
+        <img src="photo3.jpg" alt="">
+        <span>อานนิเดือนที่ฉาม</span>
+      </div>
+
+      <div class="photo">
+        <img src="photo4.jpg" alt="">
+        <span>สี่แย้วรักกานม้ากมาก</span>
+      </div>
+
+      <div class="photo">
+        <img src="photo5.jpg" alt="">
+        <span>หวานปานน้ำผึ้งเดือนห้า</span>
+      </div>
+
+      <div class="photo">
+        <img src="photo6.jpg" alt="">
+        <span>ครึ่งปีของเรางะ ♡</span>
+      </div>
+
+            <div class="photo">
+        <img src="photo7.jpg" alt="">
+        <span>เจ็ดเดือนเยยนะคะ ♡</span>
+      </div>
+            <div class="photo">
+        <img src="photo8.jpg" alt="">
+        <span>นินินิ แปดเดือนแย้วว</span>
+      </div>
+
+    </div>
+
+    <p>ถ้ารักเค้าก็กดไปต่อจิ</p>
+    <button onclick="goTo('page1')">← Back</button>
+    <button onclick="goTo('page3')">Next → 💌</button>
   </div>
-  <script>
-    function showLove() {
-      document.getElementById("message").innerHTML =
-        "รักเธอมาก ๆ เลยนะ 💕 อยู่ด้วยกันไปนาน ๆ นะ";
-    }
-  </script>
+</section>
+
+<!-- PAGE 3: LOVE LETTER -->
+<section id="page3" class="page">
+  <div class="heart">💌</div>
+  <h1>Letter For You</h1>
+ 
+
+  <div class="letter">
+    <div id="envelope">
+      <h2>To Tara only</h2>
+      <p>ถ้าเธอมีเวลาพอให้รบกวนได้ช่วยฟังความในใจสักนิดนึง
+หลับตาลงก็เห็นแต่ใบหน้าเธอ
+กี่เช้าตื่นมาก็เจอว่าคิดถึงเธออยู่เป็นประจำ
+ใจมันก็ลอยออกไปหาเธออยู่ทุกเช้าค่ำ
+ไม่รู้จะทำยังไง
+อยากมีเธออยู่เคียงข้างกายให้เธอ
+เป็นคนรักคนสุดท้ายตลอดชีวิตไม่คิดให้ใคร
+แค่เธอผู้เดียวที่ใจฉันเห็นว่าใช่
+ถ้ายังไม่มีผู้ใดได้ใจก็ถือโอกาสตรงนี้บอกกันซะเลย
+จะคิดยังไงกับฉัน ก็แล้วแต่เธอ 
+</p>
+
+<p>กดข้างล่าง เพื่อเปิดจดหมายจริง</p>
+      <div style="text-align:center">
+        <button onclick="openLetter()">Open my letter 💗</button>
+      </div>
+    </div>
+
+    <div id="letterText">
+      <h2>Dear my love,</h2>
+      <p>
+        สุขสันต์วันครบรอบ9เดือนของเรานะคะที่รัก เค้าอยากให้รู้ว่าเค้ารักเธอมาก ๆ
+        ถึงแม้พวกเราจะมีปัญหาไม่เข้าใจกัน ก็อยากให้ยังมีกันอยู่นะคะ
+        เค้ามองเห็นอนาคตของเราสองคนเยอะมากเลย เธอเป็นคนเดียวที่ทำให้เค้าอยากใช้ชีวิตให้ดีแล้วทำให้เธอมีความสุข
+        จนตอนนี้ก็อยู่ด้วยกันมา 9 เดือนแล้วนะคะ รู้สึกเหมือนเพิ่งเจอกันเมื่อวานเอง ทำไมไอรี่มีแฟนสวยขนาดนี้น้อออ พุมใจฉุด ๆ
+        เค้าสัญญาว่าจะไม่ทำให้เธอผิดหวังในตัวเค้านะ จะทำให้เธอมั่นใจในตัวเค้ามาก ๆ ให้สมกับรักที่ที่รักให้เค้ามา หนูรักพี่ธารามากที่สุดเลยค่ะ รีบกลับบ้านมากอดกันนะคะที่รัก 
+        
+      </p>
+      <p>
+        เค้าดีใจมาก ๆ ที่มีเธออยู่ข้าง ๆ
+        ขอให้เราได้สร้างความทรงจำที่ดีด้วยกันไปอีกน้านนานเลยนะคะ
+      </p>
+      <p>
+        I love you Always and forever babe 
+      </p>
+      <p style="text-align:right">with all my love,<br>Your lovie Jerry แบร่ </p>
+    </div>
+  </div>
+
+  <button onclick="goTo('page2')">← Back to memories</button>
+  <p>♡ happy our 9 months na ka my teerak ♡</p>
+</section>
+
+<script>
+function goTo(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+  document.getElementById(pageId).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+function openLetter() {
+  document.getElementById('envelope').style.display = 'none';
+  document.getElementById('letterText').style.display = 'block';
+}
+</script>
+
 </body>
 </html>
