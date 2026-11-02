@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Anniversary 💗</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      color: #8b4562;
+    }
+    .card {
+      background: white;
+      max-width: 450px;
+      margin: auto;
+      padding: 35px 20px;
+      border-radius: 25px;
+      box-shadow: 0 5px 20px #e8b8cb;
+    }
+    h1 { color: #e66b96; }
+    button {
+      background: #e66b96;
+      color: white;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Anniversary 💗</h1>
+    <p>Every moment with you is special.</p>
+    <h2>ขอบคุณที่อยู่ด้วยกันนะ</h2>
+    <button onclick="showLove()">กดอ่านข้อความ 💌</button>
+    <p id="message"></p>
+  </div>
+  <script>
+    function showLove() {
+      document.getElementById("message").innerHTML =
+        "รักเธอมาก ๆ เลยนะ 💕 อยู่ด้วยกันไปนาน ๆ นะ";
+    }
+  </script>
+</body>
+</html>
